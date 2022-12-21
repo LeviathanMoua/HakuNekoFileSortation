@@ -130,9 +130,9 @@ class MyGUI:
                         os.rename(os.path.join(childPath,file), os.path.join(childPath,str(x)+"A.jpg"))
                         #shutil.copyfile((childPath+"\\"+str(x)+".jpg"),mergedFilePath)
                     except WindowsError:
-                        os.remove(os.path.join(childPath,str(x)+".jpg"))
+                        os.remove(os.path.join(childPath,str(x)+"A.jpg"))
                         os.rename(os.path.join(childPath,file), os.path.join(childPath,str(x)+"A.jpg"))
-                        shutil.copyfile((childPath+"\\"+str(x)+".jpg"),mergedFilePath)
+                        shutil.copyfile((childPath+"\\"+str(x)+"A.jpg"),mergedFilePath)
                 for file in  natsorted(os.listdir(childPath)):
                     y=y+1
                     shutil.copy(os.path.join(childPath,file),mergedFilePath)
